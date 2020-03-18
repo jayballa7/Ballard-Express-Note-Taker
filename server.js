@@ -31,6 +31,7 @@ app.get('/api/notes', (req,res) => {
         })   
 });
 
+
 //create new Note
 app.post('/api/notes', (req, res) => {
 
@@ -66,7 +67,33 @@ app.post('/api/notes', (req, res) => {
         });
 });
 
+//delete Note
+app.delete('/api/notes/:id', (req,res) => {
+    fs.readFile("./model/db.json",'utf8', (err,data) => {
+        if(err) {
+             throw err;
+        }
+        let objNew=JSON.parse(data);
+        for(let i = 0; i < objNew.length; i++){
+            if(req.params.id == objNew[i].id) {
+                objNew.splice(i,1);
+                console.log(objNew);
+            }
+            else{
+                console.log("Id does not match")
+            }
+        }
+        const output = fs.writeFile('./model/db.json',JSON.stringify(objNew),(err) => {
+            if(err){
+                throw err;
+            }
+            console.log("Note rewritten");
+        })
+        res.send(output);
+    })
+});
 
 app.listen(PORT, function() {
     console.log(`Listening on port ${PORT}`);
 });
+

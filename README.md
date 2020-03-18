@@ -1,5 +1,5 @@
 # Ballard-Express-Note-Taker
-A command-line application that builds a team roster html page based on user input.
+An app that can be used to write, save, and delete notes.
 
 ## Table of contents
 * #general-info
@@ -10,13 +10,14 @@ A command-line application that builds a team roster html page based on user inp
 * #contact
 
 ## General info
-My goal with this project is to create a command-line application that dynamically generates an html page using node.js.
+This application will use an express backend and save and retrieve note data from a JSON file.
 
 ## Technologies
 * Visual Studio Code
 * Github
 * Git Bash
 * Node.js
+* Express
 
 ## Features
 List of features ready:

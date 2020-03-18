@@ -53,7 +53,8 @@ var renderActiveNote = function() {
 var handleNoteSave = function() {
   var newNote = {
     title: $noteTitle.val(),
-    text: $noteText.val()
+    text: $noteText.val(),
+    id: Math.ceil(Math.random() * 100)
   };
 
   saveNote(newNote).then(function(data) {
