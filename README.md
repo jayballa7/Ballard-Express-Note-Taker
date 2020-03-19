@@ -1,5 +1,5 @@
 # Ballard-Express-Note-Taker
-An app that can be used to write, save, and delete notes.
+An app that can be used to write, save, and delete notes. Its purpose is to help the user organize their events and reminders.
 
 ## Table of contents
 * #general-info
@@ -21,17 +21,19 @@ This application will use an express backend and save and retrieve note data fro
 
 ## Features
 List of features ready:
-* Created employee classes that pass all tests.
-* app.js links to the employee variables, path, and fs.
-* When application is run, user is prompted to enter their info and number of members on the team. Then members of team will be prompted for their info.
-* htmlRender.js takes this information and populates the html templates when app is run.
-* The output is a new html page that is constructed by joining the other completed templates.
+* The public folder contains the html, css, and js files that represent the front end.
+* Server.js contains routes to direct different information to different URLS.
+* The api/notes route displays all of the saved notes in JSON format.
+* When the server is run, you can view the main landing page and click "Get Started" to get to the Notes page.
+* On the Notes page, the user can write notes that will be saved in a json file and will display on that page.
+* The db.json file stores all of the saved notes.
+* The user may also delete each note. The json file will be updated when notes are added or deleted.
 
 ## Status
 * Complete
 
 ## Inspiration
-Thanks to my tutor and the TA for helping me with this assignment.
+Thanks to my tutor, my classmates and my Dad who give me pointers whenever I need it.
 
 ## Contact
 Created by Jennifer Ballard (@jayballa7).

@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const fs = require('fs');
+const path = require('path');
 const PORT = 3030;
 
 
@@ -53,7 +54,6 @@ app.post('/api/notes', (req, res) => {
                     console.log('Note saved.')
                 });
            }
-
             else {
                 obj = [];
                 obj.push(noteNew);
@@ -77,7 +77,6 @@ app.delete('/api/notes/:id', (req,res) => {
         for(let i = 0; i < objNew.length; i++){
             if(req.params.id == objNew[i].id) {
                 objNew.splice(i,1);
-                console.log(objNew);
             }
             else{
                 console.log("Id does not match")
@@ -91,6 +90,10 @@ app.delete('/api/notes/:id', (req,res) => {
         })
         res.send(output);
     })
+});
+
+app.get('*', (req,res) => {
+    res.sendFile(path.join(__dirname,'public/index.html'));
 });
 
 app.listen(PORT, function() {
