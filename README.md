@@ -1,6 +1,8 @@
 # Ballard-Express-Note-Taker
 An app that can be used to write, save, and delete notes. Its purpose is to help the user organize their events and reminders.
 
+https://boiling-ocean-26972.herokuapp.com/
+
 ## Table of contents
 * #general-info
 * #technologies
@@ -18,6 +20,7 @@ This application will use an express backend and save and retrieve note data fro
 * Git Bash
 * Node.js
 * Express
+* Heroku
 
 ## Features
 List of features ready:
